@@ -1,0 +1,17 @@
+name: 23f2004603@ds.study.iitm.ac.in
+
+on: push
+
+jobs:
+  super-lint:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: 23f2004603@ds.study.iitm.ac.in
+        uses: actions/checkout@v2
+
+      - name: 23f2004603@ds.study.iitm.ac.in
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
