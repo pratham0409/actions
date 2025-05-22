@@ -1,13 +1,17 @@
-name: Simple Test Workflow
+name: 23F2004603@ds.study.iitm.ac.in
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  test:
+  super-lint:
+    name: Lint code base
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: 23F2004603@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
