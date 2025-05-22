@@ -1,5 +1,13 @@
+name: Simple Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
-      - name: 23f2004603@ds.study.iitm.ac.in
+      - name: 23F2004603@ds.study.iitm.ac.in
         run: echo "Hello, world!"
